@@ -198,14 +198,16 @@ def render(date, results):
     """Markdown report: changes first, then the full table. results = [(row, [changes])]."""
     changed = [(r, c) for r, c in results if c and c != ["first check"]]
     lines = ["# Token report %s" % date, ""]
+    first = sum(1 for _, c in results if c == ["first check"])
     if changed:
         lines.append("## Changed since last check (%d)" % len(changed))
         lines += ["- **%s**: %s" % (name_of(r), "; ".join(c)) for r, c in changed]
-    else:
+    elif first < len(results):
         lines.append("No changes since the last check.")
-    first = sum(1 for _, c in results if c == ["first check"])
     if first:
-        lines += ["", "First check for %d token%s; changes show from the next run." % (first, "" if first == 1 else "s")]
+        if lines[-1]:
+            lines.append("")
+        lines += ["First check for %d token%s; changes show from the next run." % (first, "" if first == 1 else "s")]
     lines += ["", "## All tokens", "", "| token | verdict | grade | risk | flags |", "|---|---|---|---|---|"]
     for r, _ in results:
         if r["checked"] == "1":
