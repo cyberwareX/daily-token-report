@@ -103,7 +103,7 @@ We are testing whether people want this as a hosted service (no fork, no server:
 extras like wallets instead of a token list, Discord, or an action on a change). If you would use that, open a
 [build request](https://github.com/cyberwarex/daily-token-report/issues/new?template=build-request.md)
 with what you need and a rough budget, or leave a contact and budget on the short form at
-[cyberwarex.com/gigs](https://cyberwarex.com/gigs) if you have no GitHub account. No promise yet; we count the requests to decide what to build.
+[cyberwarex.com/gigs](https://cyberwarex.com/gigs?src=gh_daily-report) if you have no GitHub account. No promise yet; we count the requests to decide what to build.
 
 Sister demos: [wallet-alert](https://github.com/cyberwarex/wallet-alert) (rug-checks every token a wallet receives)
 and [token-check-bot](https://github.com/cyberwarex/token-check-bot) (a Telegram bot that checks any token posted in a group).
