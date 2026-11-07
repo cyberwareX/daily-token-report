@@ -203,6 +203,9 @@ def render(date, results):
         lines += ["- **%s**: %s" % (name_of(r), "; ".join(c)) for r, c in changed]
     else:
         lines.append("No changes since the last check.")
+    first = sum(1 for _, c in results if c == ["first check"])
+    if first:
+        lines += ["", "First check for %d token%s; changes show from the next run." % (first, "" if first == 1 else "s")]
     lines += ["", "## All tokens", "", "| token | verdict | grade | risk | flags |", "|---|---|---|---|---|"]
     for r, _ in results:
         if r["checked"] == "1":

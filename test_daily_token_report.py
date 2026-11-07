@@ -86,11 +86,12 @@ class Run(Base):
         day2 = {A: verdict("BLOCK", "F", 99, ["HONEYPOT_CONFIRMED"]), B: verdict("LIMIT", "C", 52)}
         res, n = d.run(watch, self.hist, self.rep, "x", date="2026-11-06", check=lambda o, t, key, chain: day1[t])
         self.assertEqual(n, 0)
-        self.assertIn("No changes", open(self.rep).read())
+        self.assertIn("First check for 2 tokens", open(self.rep).read())
         res, n = d.run(watch, self.hist, self.rep, "x", date="2026-11-07", check=lambda o, t, key, chain: day2[t])
         self.assertEqual(n, 1)
         rep = open(self.rep).read()
         self.assertIn("Changed since last check (1)", rep)
+        self.assertNotIn("First check", rep)
         self.assertIn("Base aero 0xaaaa...aaaa", rep)
         self.assertIn("verdict ALLOW -> BLOCK (worse)", rep)
         rows = list(csv.DictReader(open(self.hist)))
