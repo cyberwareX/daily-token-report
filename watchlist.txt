@@ -1,0 +1,5 @@
+# one token per line: [chain] 0xaddress [label]   chains: base bsc ethereum polygon arbitrum (default base)
+# the honeypot sample is a known sell-blocked coin, kept here so the report always shows a BLOCK row
+base 0x940181a94a35a4569e4529a3cdfb74e38fd98631 AERO
+base 0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace honeypot-sample
+bsc 0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82 CAKE

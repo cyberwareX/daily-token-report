@@ -1,0 +1,39 @@
+# Real runs on 2026-11-07 (UTC), oracle.cyberwarex.com, our own prepaid test keys
+
+history.csv after 5 passes. NOT CHECKED rows are real unhappy paths, reported as such:
+passes 1-2 hit the oracle's 30-per-minute per-IP limit on our busy host (before the Retry-After wait was added),
+pass 4 ran our first test key empty mid-run.
+
+date,chain,address,label,checked,verdict,grade,risk,flags,why
+2026-11-07,base,0x940181a94a35a4569e4529a3cdfb74e38fd98631,AERO,1,ALLOW,A,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace,honeypot-sample,1,BLOCK,F,99,HONEYPOT_CONFIRMED,sells revert in a live simulation: you cannot exit
+2026-11-07,bsc,0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82,CAKE,0,,,,,oracle unavailable (http 429)
+2026-11-07,base,0x940181a94a35a4569e4529a3cdfb74e38fd98631,AERO,0,,,,,oracle unavailable (http 429)
+2026-11-07,base,0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace,honeypot-sample,0,,,,,oracle unavailable (http 429)
+2026-11-07,bsc,0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82,CAKE,1,ALLOW,B,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0x940181a94a35a4569e4529a3cdfb74e38fd98631,AERO,1,ALLOW,A,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace,honeypot-sample,1,BLOCK,F,99,HONEYPOT_CONFIRMED,sells revert in a live simulation: you cannot exit
+2026-11-07,bsc,0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82,CAKE,1,ALLOW,B,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0x940181a94a35a4569e4529a3cdfb74e38fd98631,AERO,1,ALLOW,A,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace,honeypot-sample,1,BLOCK,F,99,HONEYPOT_CONFIRMED,sells revert in a live simulation: you cannot exit
+2026-11-07,bsc,0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82,CAKE,0,,,,,prepaid key is empty or invalid
+2026-11-07,base,0x940181a94a35a4569e4529a3cdfb74e38fd98631,AERO,1,ALLOW,A,5,CLEAN,trade simulation passed and no rug signal found
+2026-11-07,base,0xb1001f05dfe2edeab6eff92f3a4c1d631c65aace,honeypot-sample,1,BLOCK,F,99,HONEYPOT_CONFIRMED,sells revert in a live simulation: you cannot exit
+2026-11-07,bsc,0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82,CAKE,1,ALLOW,B,5,CLEAN,trade simulation passed and no rug signal found
+
+## report.md of the last pass (this is the GIF)
+
+# Token report 2026-11-07
+
+No changes since the last check.
+
+## All tokens
+
+| token | verdict | grade | risk | flags |
+|---|---|---|---|---|
+| Base AERO 0x9401...8631 | ALLOW | A | 5 | CLEAN |
+| Base honeypot-sample 0xb100...aace | BLOCK | F | 99 | HONEYPOT_CONFIRMED |
+| BSC CAKE 0x0e09...ce82 | ALLOW | B | 5 | CLEAN |
+
+Automated heuristics, not financial advice. https://github.com/cyberwarex/daily-token-report
+
