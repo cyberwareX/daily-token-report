@@ -96,7 +96,7 @@ def read_watchlist(path):
             if (chain, addr) in seen:
                 continue
             seen.add((chain, addr))
-            out.append((chain, addr, " ".join(parts[1:])[:40]))
+            out.append((chain, addr, " ".join(parts[1:]).replace("|", "/")[:40]))  # "|" would break the table
     return out
 
 
