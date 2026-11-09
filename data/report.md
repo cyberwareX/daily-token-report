@@ -1,9 +1,6 @@
-# Token report 2026-11-08
+# Token report 2026-11-09
 
-## Changed since last check (3)
-- **Base AERO 0x9401...8631**: new flags: DEPLOYER_SHARED_INFRA, MINT_ENABLED, NO_EFFECTIVE_CONTROLLERS, SCAM_SIGNALS_INCOMPLETE, TRUSTED_ISSUER; flags cleared: CLEAN
-- **Base honeypot-sample 0xb100...aace**: new flags: BLACKLIST_ENABLED, CREATOR_HOLDS_SUPPLY_CONTRACT, DEPLOYER_HIGH_F_RATE, DEPLOYER_PRIOR_RUG, MINT_ENABLED
-- **BSC CAKE 0x0e09...ce82**: risk 5 -> 22; new flags: DEPLOYER_UNKNOWN, MINT_ENABLED, POOL_NEW, SCAM_SIGNALS_INCOMPLETE; flags cleared: CLEAN
+No changes since the last check.
 
 ## All tokens
 
