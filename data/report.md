@@ -1,7 +1,6 @@
-# Token report 2026-11-21
+# Token report 2026-11-22
 
-## Changed since last check (1)
-- **Base honeypot-sample 0xb100...aace**: new flags: DEPLOYER_HIGH_F_RATE, DEPLOYER_PRIOR_RUG; flags cleared: DEPLOYER_UNKNOWN, SCAM_SIGNALS_INCOMPLETE
+No changes since the last check.
 
 ## All tokens
 
