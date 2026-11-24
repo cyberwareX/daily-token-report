@@ -1,4 +1,4 @@
-# Token report 2026-11-23
+# Token report 2026-11-24
 
 No changes since the last check.
 
